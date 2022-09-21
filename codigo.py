@@ -1,4 +1,5 @@
 import math
+import re
 
 
 class Punto:
@@ -37,17 +38,30 @@ class Punto:
         return math.sqrt(Punto.vector(Punto1, Punto2)[0]**2+Punto.vector(Punto1, Punto2)[1]**2)
 
 class Rectangulo:
-    def __init__(self, x, y):
+    def __init__(self, x, y, a, b):
         self.x = x
         self.y = y
+        self.a = a
+        self.b = b
 
     def constructor(a=0, b=0, c=0, d=0):
-        punto1 = [a, b]
-        punto2 = [c, d]
-        return punto1, punto2
+        puntoinicial = [a, b]
+        puntofinal = [c, d]
+        return puntoinicial, puntofinal
 
-    def base():
+    def base(Puntoinicial, Puntofinal):
+        if Puntoinicial[1]<Puntofinal[1]:
+            a = Puntoinicial
+            b = [Puntofinal[0], Puntoinicial[1]]
+            return a, b
+        else:
+            a = Puntofinal
+            b = [Puntoinicial[0], Puntofinal[1]]
+            return a, b
 
-    def altura():
+    def altura(Puntoinicial, Puntofinal):
+        return abs(Puntoinicial[1]-Puntofinal[1])
 
-    def area():
+    def area(Puntoinicial, Puntofinal):
+        a, b = Rectangulo.base(Puntoinicial, Puntofinal)
+        return (Rectangulo.altura(Puntoinicial, Puntofinal)*Punto.distancia(a,b))
