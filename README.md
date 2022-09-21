@@ -58,7 +58,7 @@ class Rectangulo:
         puntofinals = [a, d]
         return puntoinicial, puntofinal, puntoinicials, puntofinals
 
-    def base(Puntoinicial, Puntofinal):
+    def base(Puntoinicial, Puntofinal): #Devuelve los puntos de la base
         if Puntoinicial[1]<Puntofinal[1]:
             a = Puntoinicial
             b = [Puntofinal[0], Puntoinicial[1]]
