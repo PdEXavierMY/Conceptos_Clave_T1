@@ -30,4 +30,3 @@ if __name__ == '__main__':
     print("El área del rectángulo es "+str(area))
     print("La altura del rectángulo es "+str(altura))
     print("La base del rectángulo es "+str(base))
-    
