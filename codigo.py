@@ -1,4 +1,3 @@
-from turtle import pu
 import math
 
 
