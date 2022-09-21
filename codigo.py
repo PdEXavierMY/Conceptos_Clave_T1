@@ -11,24 +11,24 @@ class Punto:
         punto = [a, b]
         return punto
     
-    def string(self, Punto):
+    def string(Punto):
         print("("+str(Punto[0])+", "+str(Punto[1])+")")
 
     def cuadrante(punto):
         if punto[0]>0 and punto[1]>0:
-            print("Pertenece al cuadrante 1")
+            print("El punto "+str(punto)+" pertenece al cuadrante 1")
         elif punto[0]<0 and punto[1]>0:
-            print("Pertenece al cuadrante 2")
+            print("El punto "+str(punto)+" pertenece al cuadrante 2")
         elif punto[0]>0 and punto[1]<0:
-            print("Pertenece al cuadrante 3")
+            print("El punto "+str(punto)+" pertenece al cuadrante 3")
         elif punto[0]<0 and punto[1]<0:
-            print("Pertenece al cuadrante 4")
-        elif punto[0]==0:
-            print("Está sobre el eje x")
-        elif punto[1]==0:
-            print("Está sobre el eje y")
+            print("El punto "+str(punto)+" pertenece al cuadrante 4")
+        elif punto[0]==0 and punto[1]!=0:
+            print("El punto "+str(punto)+" está sobre el eje x")
+        elif punto[1]==0 and punto[1]!=0:
+            print("El punto "+str(punto)+" está sobre el eje y")
         elif punto[0]==0 and punto[1]==0:
-            print("Está en el eje de coordenadas")
+            print("El punto "+str(punto)+" está en el eje de coordenadas")
 
     def vector(Punto1, Punto2):
         vector = [Punto2[0]-Punto1[0], Punto2[1]-Punto1[1]]
@@ -47,7 +47,9 @@ class Rectangulo:
     def constructor(a=0, b=0, c=0, d=0):
         puntoinicial = [a, b]
         puntofinal = [c, d]
-        return puntoinicial, puntofinal
+        puntoinicials = [c, b]
+        puntofinals = [a, d]
+        return puntoinicial, puntofinal, puntoinicials, puntofinals
 
     def base(Puntoinicial, Puntofinal):
         if Puntoinicial[1]<Puntofinal[1]:
