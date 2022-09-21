@@ -2,6 +2,7 @@ from re import A
 from codigo import Punto, Rectangulo
 
 if __name__ == '__main__':
+    #Experimentacion
     A = Punto.constructor(2, 3); Punto.string(A)
     B = Punto.constructor(5, 5); Punto.string(B)
     C = Punto.constructor(-3, -1); Punto.string(C)
