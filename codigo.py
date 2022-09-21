@@ -35,3 +35,19 @@ class Punto:
 
     def distancia(Punto1, Punto2):
         return math.sqrt(Punto.vector(Punto1, Punto2)[0]**2+Punto.vector(Punto1, Punto2)[1]**2)
+
+class Rectangulo:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def constructor(a=0, b=0, c=0, d=0):
+        punto1 = [a, b]
+        punto2 = [c, d]
+        return punto1, punto2
+
+    def base():
+
+    def altura():
+
+    def area():
